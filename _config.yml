@@ -1,29 +1,52 @@
-# Site settings
-title: Jekyll-Uno
-description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll'
-url: 'http://joshgerdes.com/jekyll-uno' 
-baseurl: '/jekyll-uno/'
-# google_analytics: 'UA-XXXXXX-X'
+
+# Syntax highlighting
+markdown:            redcarpet
+highlighter:         pygments
+
+# Permalinks
+permalink:           /:title
+relative_permalinks: true
+
+# Setup
+timezone:            your timezone # eg. Asia/Kathmandu
+locale:              your locale language # eg. en_us
+name:				         site name
+title:               site title
+tagline:             'tagline'
+description:         'description'
+url:                 site url
+rss:                 rss feed url
+baseurl:             '/'
+baseurl_posts_img:   '/assets/images/posts/'
+baseurl_featured_img: '/assets/images/hero/'
+baseurl_featured_thumbnail: '/assets/images/thumbnail/'
+baseurl_javascripts: '/assets/javascripts/'
+icon:                your site icon path # /assets/img/icon.png [best 300px X 300px]
+disqus:              disqus_shortname # get it on https://disqus.com/admin/
 
 author:
-  name: 'Josh Gerdes'
-  email: josh@joshgerdes.com
-  twitter_username: joshgerdes
-  github_username:  joshgerdes
-  linkedin_username:  joshgerdes
+  name:           	 your name
+  url:            	 your site url
+  facebook:          username
+  twitter:           username
+  google_plus:       username
+  linkedin:          username
+  dribbble:          username
+  pinterest:         username
+  kiva:              username
 
-# Build settings
-destination: _site
-paginate: 10
-permalink: /:year/:title/
-markdown: kramdown
-highlighter: pygments
+fb_admins:           your facebook profile id
+fb_appid:            your facebook app id
 
-kramdown:
-  # use Github Flavored Markdown
-  input: GFM
-  # do not replace newlines by <br>s
-  hard_wrap: false
+# Server
+destination:      	 ./_site
+exclude:          	 [".editorconfig", ".gitignore", "bower.json", "composer.json", "CONTRIBUTING.md", "CNAME", "LICENSE", "Gruntfile.js", "package.json", "node_modules", "README.md", "sass", "haml"]
+port:             	 9001
 
-gems: ['jekyll-paginate']
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "default"
